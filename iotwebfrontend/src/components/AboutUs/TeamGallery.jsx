@@ -267,7 +267,7 @@ export default function TeamGallery() {
                       <FadeIn
                         key={imgIndex}
                         direction="up"
-                        delay={imgIndex * 2} // delay berurutan 0s, 0.6s, 1.2s, dst.
+                        delay={imgIndex * 0.1} // delay berurutan 0s, 0.6s, 1.2s, dst.
                       >
                         <img
                           src={img.src}

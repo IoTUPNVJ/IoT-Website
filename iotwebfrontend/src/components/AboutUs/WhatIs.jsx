@@ -11,7 +11,7 @@ const WhatIs = () => {
     >
       <FadeIn direction={"down"} delay={0.4}>
         <h2
-          className="text-center text-5xl font-semibold mb-16"
+          className="text-center text-5xl font-semibold mb-16 mt-3"
           style={{ color: "var(--color-biru-tua)", fontFamily: "'OptimaNova'" }}
         >
           What Is?
@@ -23,19 +23,19 @@ const WhatIs = () => {
 
           <div className="w-full xl:w-1/3 mt-10 flex justify-center">
             <img
-              src="/aboutUs/IoTFull.webp"
+              src="/aboutUs/Group 1042.webp"
               alt="Foto kabinet IoT"
-              className="rounded-2xl object-cover h-[340px] w-full max-w-[400px]"
+              className="rounded-2xl object-cover h-[390px] w-full max-w-[450px]"
             />
           </div>
           {/* Teks */}
           <div className="w-full xl:max-w-[700px] text-justify">
             <h1
-              className="text-[42px] leading-[48px]"
+              className="text-[50px] leading-[48px]"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
               <span
-                className="font-bold text-[69px]"
+                className="font-bold text-[80px]"
                 style={{ color: "var(--color-biru-tua)" }}
               >
                 KSM{" "}
