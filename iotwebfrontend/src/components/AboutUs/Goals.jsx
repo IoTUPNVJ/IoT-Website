@@ -15,13 +15,13 @@ export default function VisiMisiSection() {
       title: "Prestasi dan Kompetisi",
       content:
         "Mendorong partisipasi aktif dan meraih prestasi di berbagai kompetisi IoT tingkat regional, nasional, dan internasional, termasuk GEMASTIK, dan Kontes Kapal Indonesia (KKI).",
-      icon: "/aboutUs/badge_12423291.webp",
+      icon: "/aboutUs/prize.png",
     },
     {
       title: "Kontribusi bagi Universitas",
       content:
         "Memberikan kontribusi nyata bagi universitas dengan meningkatkan akreditasi melalui prestasi, menjadi daya tarik bagi calon mahasiswa, dan mendukung proyek pengembangan IoT internal.",
-      icon: "/aboutUs/internet_13984588.webp",
+      icon: "/aboutUs/globe.png",
     },
     {
       title: "Kolaborasi dan Relasi",
@@ -42,7 +42,7 @@ export default function VisiMisiSection() {
     <div>
       <FadeIn direction={"left"} delay={1.2}>
         <h1
-          className="text-4xl md:text-5xl lg:text-6xl mt-20 font-semibold text-[#2C3E50] text-center"
+          className="text-4xl md:text-5xl lg:text-6xl mt-20 font-semibold text-[#2C3E50] text-center select-none"
           style={{ fontFamily: "'OptimaNova'" }}
         >
           Our Goals
@@ -50,7 +50,7 @@ export default function VisiMisiSection() {
       </FadeIn>
 
       <FadeIn direction={"up"} delay={1.6}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-40 gap-y-16 py-12 px-6 max-w-screen-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-13 xl:gap-30 py-12 px-11 xl:px-18 max-w-screen-xl mx-auto">
           {boxes.map((box, index) => {
             const isActive = activeIndex === index;
 
@@ -59,9 +59,9 @@ export default function VisiMisiSection() {
                 key={index}
                 onClick={() => handleClick(index)}
                 /* Card: default glass; on hover/active still glass but slightly stronger blur */
-                className={`group relative rounded-2xl p-8 h-[340px] sm:h-[360px] lg:h-[380px] overflow-hidden cursor-pointer transition-all duration-500 
-                  bg-white/20 backdrop-blur-md border border-white/10 shadow-sm
-                  hover:bg-white/30 hover:backdrop-blur-lg`}
+                className={`group relative rounded-2xl p-12 h-[340px] md:h-[360px] lg:h-[380px] overflow-hidden cursor-pointer transition-all duration-500 
+                  bg-black/30 backdrop-blur-md border border-white/10 shadow-sm
+                  hover:bg-black/40 hover:backdrop-blur-lg`}
               >
                 {/* Decorative soft highlight (ke kiri/kanan) */}
                 <div
@@ -77,7 +77,7 @@ export default function VisiMisiSection() {
                 {/* ICON tetap ada, cuma dikasih fade, tapi tidak hidden */}
                 <img
                   src={box.icon}
-                  className={`w-60 h-50 mx-auto mb-4 transition-all duration-400 z-10
+                  className={`w-54 h-45 mx-auto mb-4 transition-all duration-400 z-10 select-none
     ${
       isActive
         ? "opacity-0 scale-90"
@@ -87,11 +87,11 @@ export default function VisiMisiSection() {
 
                 {/* Judul: transform hanya naik saat hover/aktif */}
                 <h2
-                  className={`absolute left-6 right-6 mx-auto text-center font-extrabold transition-transform duration-500 z-20
+                  className={`absolute left-6 right-6 mx-auto text-center font-extrabold transition-transform duration-500 z-20 select-none
     ${
       isActive
         ? "-translate-y-53 text-2xl sm:text-2xl md:text-2xl lg:text-2xl"
-        : "translate-y-0 text-3xl sm:text-3xl md:text-2xl lg:text-4xl"
+        : "translate-y-0 text-2xl sm:text-3xl md:text-2xl lg:text-4xl"
     }
     group-hover:-translate-y-53
   `}
@@ -104,7 +104,7 @@ export default function VisiMisiSection() {
 
                 {/* Konten teks: tersembunyi awalnya, muncul saat hover/aktif */}
                 <div
-                  className={`absolute inset-0 px-4 pt-30 flex items-start justify-center text-center transition-all duration-500 z-10
+                  className={`absolute inset-0 px-6 lg:px-7 pt-30 flex items-start justify-center text-center transition-all duration-500 z-10
                     ${
                       isActive
                         ? "opacity-100 pointer-events-auto"
@@ -112,7 +112,7 @@ export default function VisiMisiSection() {
                     }
                   `}
                 >
-                  <p className="text-xl sm:text-base md:text-sm lg:text-xl leading-relaxed text-[#1f2937]">
+                  <p className="text-sm md:text-sm lg:text-xl leading-relaxed text-[#1f2937] select-none">
                     {box.content}
                   </p>
                 </div>
